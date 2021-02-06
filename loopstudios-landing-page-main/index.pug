@@ -15,7 +15,12 @@ html(lang="en")
         a(id="hamburger")
           img.menu(src="./images/icon-hamburger.svg", alt="Hamburger", id="hamburger-open")
           img.menu(src="./images/icon-close.svg", alt="Hamburger", id="hamburger-close")
-
+        ul.nav-links
+          li: a(href="#") About
+          li: a(href="#") Careers
+          li: a(href="#") Events
+          li: a(href="#") Products
+          li: a(href="#") Support
       .content#menu-content
         ul.nav-links
           li: a(href="#") About
@@ -31,17 +36,25 @@ html(lang="en")
       //- brand story section
       .brand
         img(src="./images/mobile/image-interactive.jpg", alt="Brand")
-        p.title The leader in interactive VR
-        p.subtitle
-          | Founded in 2011, Loopstudios has been producing world-class virtual reality
-          | projects for some of the best companies around the globe.Our award-winning
-          | creations have transformed businesses through digital experiences that bind
-          | to their brand.
+        .content
+          p.title The leader in interactive VR
+          p.subtitle
+            | Founded in 2011, Loopstudios has been producing world-class virtual reality
+            | projects for some of the best companies around the globe.Our award-winning
+            | creations have transformed businesses through digital experiences that bind
+            | to their brand.
       //- creations section
       .creations
-        p.title Our creations
+        div.titlebar
+          p.title Our creations
+          button.btn-ghost See all
         mixin creation(title)
           div(style!=attributes.style)
+            //- darken the background
+            div.filter
+              p= title
+        mixin creation-desktop(title)
+          div.desktop(style!=attributes.style)
             //- darken the background
             div.filter
               p= title
@@ -54,27 +67,37 @@ html(lang="en")
           +creation('Pocket borealis')(style="background-image: url(./images/mobile/image-pocket-borealis.jpg)")
           +creation('The curiosity')(style="background-image: url(./images/mobile/image-curiosity.jpg)")
           +creation('Make it fisheye')(style="background-image: url(./images/mobile/image-fisheye.jpg)")
+          +creation-desktop('Deep earth')(style="background-image: url(./images/desktop/image-deep-earth.jpg)")
+          +creation-desktop('Night arcade')(style="background-image: url(./images/desktop/image-night-arcade.jpg)")
+          +creation-desktop('Soccer team VR')(style="background-image: url(./images/desktop/image-soccer-team.jpg)")
+          +creation-desktop('The grid')(style="background-image: url(./images/desktop/image-grid.jpg)")
+          +creation-desktop('From up above VR')(style="background-image: url(./images/desktop/image-from-above.jpg)")
+          +creation-desktop('Pocket borealis')(style="background-image: url(./images/desktop/image-pocket-borealis.jpg)")
+          +creation-desktop('The curiosity')(style="background-image: url(./images/desktop/image-curiosity.jpg)")
+          +creation-desktop('Make it fisheye')(style="background-image: url(./images/desktop/image-fisheye.jpg)")
         button.btn-ghost See all
 
     //- footer section
     footer
-      img.logo(src="./images/logo.svg", alt="Logo")
-      ul.nav-links
-        li: a(href="#") About
-        li: a(href="#") Careers
-        li: a(href="#") Events
-        li: a(href="#") Products
-        li: a(href="#") Support
-      div.social
-        a(href="")
-          img(src="./images/icon-facebook.svg", alt="Facebook")
-        a(href="")
-          img(src="./images/icon-twitter.svg", alt="Twitter")
-        a(href="")
-          img(src="./images/icon-pinterest.svg", alt="Pinteret")
-        a(href="")
-          img(src="./images/icon-instagram.svg", alt="Instagram")
+      div
+        img.logo(src="./images/logo.svg", alt="Logo")
+        ul.nav-links
+          li: a(href="#") About
+          li: a(href="#") Careers
+          li: a(href="#") Events
+          li: a(href="#") Products
+          li: a(href="#") Support
+      div
+        div.social
+          a(href="")
+            img(src="./images/icon-facebook.svg", alt="Facebook")
+          a(href="")
+            img(src="./images/icon-twitter.svg", alt="Twitter")
+          a(href="")
+            img(src="./images/icon-pinterest.svg", alt="Pinteret")
+          a(href="")
+            img(src="./images/icon-instagram.svg", alt="Instagram")
 
-      p.copyright © 2021 Loopstudios. All rights reserved.
+        p.copyright © 2021 Loopstudios. All rights reserved.
 
   script(src="index.js")

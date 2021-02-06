@@ -11,7 +11,7 @@ document.onscroll = function () {
       header.classList.remove('elevated');
   } else {
     if (!header.classList.contains('elevated'))
-      header.classList.add('elevated');
+      if (!header.classList.contains('open')) header.classList.add('elevated');
   }
 };
 
