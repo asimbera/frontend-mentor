@@ -1,3 +1,4 @@
 # Frontend Mentor Solutions
 
-- [ ] [Loopstudios landing page](loopstudios-landing-page-main) `[WIP]`
+- [x] [Loopstudios landing page](loopstudios-landing-page-main)
+- [ ] [Easybank landing page](easybank-landing-page-master) `WIP`
