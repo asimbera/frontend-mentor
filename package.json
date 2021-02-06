@@ -1,0 +1,17 @@
+{
+  "name": "frontend-mentor",
+  "version": "1.0.0",
+  "description": "Frontent Mentor Solutions",
+  "repository": "git@github.com:asimbera/frontend-mentor-challenges.git",
+  "author": "Asim Bera <asimbera@outlook.in> (https://asim.social/)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.pug"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "parcel-bundler": "^1.12.4",
+    "pug": "^3.0.0"
+  }
+}
